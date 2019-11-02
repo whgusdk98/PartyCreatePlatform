@@ -5,17 +5,20 @@
         android:id="@+id/menu_list"
         android:title="목록"
         android:enabled="true"
-        android:icon="@color/colorPrimary"/>
+        android:iconTint="@color/colorPrimary"
+        android:icon="@drawable/list"/>
 
     <item
         android:id="@+id/menu_monthly"
-        android:title="이달의 행사"
+        android:title="이달의 팥팅"
         android:enabled="true"
-        android:icon="@color/colorPrimary"/>
+        android:iconTint="@color/colorPrimary"
+        android:icon="@drawable/home"/>
 
     <item
         android:id="@+id/menu_write"
         android:title="등록"
         android:enabled="true"
-        android:icon="@color/colorPrimary"/>
+        android:iconTint="@color/colorPrimary"
+        android:icon="@drawable/add"/>
 </menu>
