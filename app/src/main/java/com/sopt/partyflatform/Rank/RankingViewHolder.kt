@@ -25,11 +25,11 @@ class RankingViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         partyName.text = data.party
         var party_Idx = data.party_Idx
 
-        if(Integer.parseInt(data.rank) < 4){
-            chartCircle.setImageResource(R.drawable.chartcircle)
-        }else{
-            chartCircle.setImageResource(R.drawable.chartcircle_b)
-        }
+//        if(Integer.parseInt(data.rank) < 4){
+//            chartCircle.setImageResource(R.drawable.chartcircle)
+//        }else{
+//            chartCircle.setImageResource(R.drawable.chartcircle_b)
+//        }
 
         itemView.setOnClickListener{
             //val context = it.context

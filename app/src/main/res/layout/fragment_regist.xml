@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/regist_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_addphoto"></ImageView>
+
+        <EditText
+            android:id="@+id/regist_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="파티명"></EditText>
+
+        <EditText
+            android:id="@+id/regist_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="주최"></EditText>
+
+        <EditText
+            android:id="@+id/regist_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="일시"></EditText>
+
+        <EditText
+            android:id="@+id/regist_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="장소"></EditText>
+
+        <EditText
+            android:id="@+id/regist_want"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="하고싶은말"
+            android:gravity="top"></EditText>
+        <EditText
+            android:id="@+id/regist_caution"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="필독사항"
+            android:gravity="top"></EditText>
+
+        <Button
+            android:id="@+id/btn_regist"
+            android:layout_width="366dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:text="게시하기"
+            android:textColor="@color/cardview_light_background">
+        </Button>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
