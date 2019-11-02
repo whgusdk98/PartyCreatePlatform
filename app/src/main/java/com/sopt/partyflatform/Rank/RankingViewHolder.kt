@@ -17,14 +17,19 @@ import com.sopt.partyflatform.R
 class RankingViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
     val rank_value: TextView = view.findViewById(R.id.rank_value)
-    val postImage: ImageView = view.findViewById(R.id.postImage)
     val partyName: TextView = view.findViewById(R.id.partyName)
-    //val party_Idx: Int
+    val chartCircle: ImageView = view.findViewById(R.id.chartCircle)
+    //val party_Idx: Int  이미지의 setdrawable을 바꿈
     fun bind(data: GetRankingData){
         rank_value.text = data.rank
-        postImage.setImageResource(data.poster)
         partyName.text = data.party
         var party_Idx = data.party_Idx
+
+        if(Integer.parseInt(data.rank) < 4){
+            chartCircle.setImageResource(R.drawable.chartcircle)
+        }else{
+            chartCircle.setImageResource(R.drawable.chartcircle_b)
+        }
 
         itemView.setOnClickListener{
             //val context = it.context
