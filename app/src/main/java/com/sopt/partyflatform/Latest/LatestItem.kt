@@ -1,15 +1,15 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Latest
 
 import com.google.gson.annotations.SerializedName
 
-data class GetMainInfoData(
+data class GetLatestMainData(
     val status: Int,
     val success: Boolean,
     val message: String,
-    val data: List<MonthlyData>
+    val data: List<LatestItem>
 )
 
-data class MonthlyData(
+data class LatestItem(
     @SerializedName("party_idx")
     val idx: Int,
     @SerializedName("image")

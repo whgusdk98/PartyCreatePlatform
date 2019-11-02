@@ -1,4 +1,4 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,5 +11,6 @@ object ApplicationController {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val service: GetService = retrofit.create(GetService::class.java)
+    val service: GetService = retrofit.create(
+        GetService::class.java)
 }

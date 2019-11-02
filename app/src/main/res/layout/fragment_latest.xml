@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LatestFragment"
+    tools:context=".Latest.LatestFragment"
     android:orientation="vertical">
 
     <LinearLayout
@@ -26,8 +26,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#000000"
-            android:lineSpacingExtra="9sp"
-            tools:text="최신"
+            android:text="최신"
             />
         <ImageView
             android:layout_marginLeft="212dp"
@@ -44,6 +43,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="20dp"
         android:paddingLeft="16dp"
         android:id="@+id/rv_latest_item"
         android:layout_width="match_parent"

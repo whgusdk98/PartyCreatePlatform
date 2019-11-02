@@ -1,4 +1,4 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Util
 
 import android.content.Context
 
