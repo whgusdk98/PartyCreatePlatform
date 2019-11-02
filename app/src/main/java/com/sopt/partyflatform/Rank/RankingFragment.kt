@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_ranking.*
 import kotlinx.android.synthetic.main.fragment_ranking.view.*
+import com.sopt.partyflatform.R
+import com.sopt.partyflatform.Rank.GetRankingData
+import com.sopt.partyflatform.Rank.RankingAdapter
 
 /**
  * A simple [Fragment] subclass.
@@ -31,10 +34,6 @@ class RankingFragment : Fragment() {
         //fragment_rv = view.findViewById(R.id.)
 
         initRankRepoList(view)
-
-        view.newText.setOnClickListener {
-            fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.container, LatestFragment())?.commit()
-        }
         return view
     }
 
