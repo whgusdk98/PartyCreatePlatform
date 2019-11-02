@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val ft = fm.beginTransaction()
         when (n) {
             0 -> { // 목록
-                ft.replace(R.id.container, blankFragment)
+                ft.replace(R.id.container, RankingFragment())
                 ft.commit() }
             1 -> { // 이달의 행사
                 ft.replace(R.id.container, blankFragment)

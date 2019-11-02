@@ -2,6 +2,7 @@ package com.sopt.partyflatform
 
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,7 @@ class DetailFragment : Fragment() {
     var detail_date = ""
     var detail_txt = ""
     var detail_caution = ""
+    var idx = 0
 
 
     override fun onCreateView(
@@ -27,6 +29,8 @@ class DetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val detail_view =  inflater.inflate(R.layout.fragment_detail, container, false)
+
+        Log.d("detailFragment", idx.toString())
 
         Glide.with(this@DetailFragment)
             .load(detail_img_uri)
