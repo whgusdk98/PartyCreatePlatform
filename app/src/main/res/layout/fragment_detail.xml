@@ -1,100 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DetailFragment">
 
+        <ImageView
+            android:id="@+id/detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            tools:layout_editor_absoluteX="77dp"
+            tools:layout_editor_absoluteY="116dp"
+            tools:src="@tools:sample/avatars" />
 
-    <ImageView
-        android:id="@+id/detail_img"
-        android:layout_width="257dp"
-        android:layout_height="312dp"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="116dp"
-        tools:src="@tools:sample/avatars" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="29dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/detail_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="빨간 딱지"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="477dp"
-        android:textSize="20dp"
-        android:gravity="center"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="빨간 딱지"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/checkbox_drawable"></CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:id="@+id/detail_host"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한방에한놈"></TextView>
+
+                <TextView
+                    android:id="@+id/detail_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="216dp"
+                    android:text="293"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="6sp"
+                    android:text="일시"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="6sp"
+                    android:text="2019년 11월 22일 (금) 19:00 "
+                    android:textColor="#444444"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="6sp"
+                    android:text="장소"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/detail_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="-0.02"
+                    android:lineSpacingExtra="6sp"
+                    android:text="한양대학교 운동장"
+                    android:textColor="#444444"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <view
+                android:layout_width="360dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="23dp"></view>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="주최: "
-                tools:layout_editor_absoluteX="192dp"
-                tools:layout_editor_absoluteY="504dp"></TextView>
-            <TextView
-                android:id="@+id/detail_host"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="한방에 한놈"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/detail_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="일시: "
-                tools:layout_editor_absoluteX="192dp"
-                tools:layout_editor_absoluteY="504dp"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11월 22일 금요일 저녁7시"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:layout_marginTop="23dp"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="6sp"
+                android:text="하고싶은 말"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
             <TextView
                 android:id="@+id/detail_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내용: "
-                tools:layout_editor_absoluteX="192dp"
-                tools:layout_editor_absoluteY="504dp"></TextView>
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="-0.04"
+                android:lineSpacingExtra="6sp"
+                android:text="‘내가 바로 딱지왕’ 각자 집에서 만든 딱지를 가져와
+딱지 대결을 해봐요! 1등에게는 제가 준비한 특별한
+상품도 있답니다~!"
+                android:textColor="#333333"
+                android:textSize="14sp" />
             <TextView
+                android:layout_marginTop="29dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="내가 바로 딱지왕 각자 집에서 직접 만든 딱지를 가져와 딱지대결을 해봐요! 1등에게는 제가 준비한 특별한 상품도 있답니다~!"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:letterSpacing="-0.02"
+                android:lineSpacingExtra="6sp"
+                android:text="필독사항"
+                />
             <TextView
                 android:id="@+id/detail_caution"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="필독사항: "
-                tools:layout_editor_absoluteX="192dp"
-                tools:layout_editor_absoluteY="504dp"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="빨간색 재료로 딱지를 직접 만들어오셔야해요"></TextView>
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="60dp"
+                android:letterSpacing="-0.04"
+                android:lineSpacingExtra="6sp"
+                tools:text="‘내가 바로 딱지왕’ 각자 집에서 만든 딱지를 가져와
+딱지 대결을 해봐요! 1등에게는 제가 준비한 특별한
+상품도 있답니다~!"
+                />
         </LinearLayout>
-
-    </LinearLayout>
 
 
 </LinearLayout>
+</androidx.core.widget.NestedScrollView>

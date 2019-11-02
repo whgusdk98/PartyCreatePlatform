@@ -46,7 +46,6 @@ class LatestFragment : Fragment() {
         v.rv_latest_item.layoutManager = GridLayoutManager(context, 2)
 
 
-
         latestAdapter.notifyDataSetChanged()
 
         return v

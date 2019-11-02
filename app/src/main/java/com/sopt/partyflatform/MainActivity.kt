@@ -8,12 +8,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var blankFragment: BlankFragment
+    private lateinit var monthlyFragment: MonthlyFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         blankFragment = BlankFragment()
+        monthlyFragment = MonthlyFragment()
         setFrag(0)
         bottomNavi()
 
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 ft.replace(R.id.container, RankingFragment())
                 ft.commit() }
             1 -> { // 이달의 행사
-                ft.replace(R.id.container, blankFragment)
+                ft.replace(R.id.container, monthlyFragment)
                 ft.commit() }
             2 -> { // 등록
                 ft.replace(R.id.container, blankFragment)
