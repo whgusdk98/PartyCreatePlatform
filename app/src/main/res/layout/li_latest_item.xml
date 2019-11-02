@@ -8,11 +8,14 @@
 
     <ImageView
         android:id="@+id/latest_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="158dp"
+        android:layout_height="158dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@color/colorAccent"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/corners"
+        />
 
     <TextView
         android:id="@+id/latest_title"
