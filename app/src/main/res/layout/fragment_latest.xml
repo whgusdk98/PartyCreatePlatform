@@ -5,7 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".LatestFragment">
 
+
+
     <androidx.recyclerview.widget.RecyclerView
+        android:paddingLeft="16dp"
         android:id="@+id/rv_latest_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
