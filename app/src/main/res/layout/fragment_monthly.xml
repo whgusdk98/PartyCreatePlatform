@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackGray"
-    tools:context=".MonthlyFragment">
+    tools:context=".Monthly.MonthlyFragment">
 
     <View
         android:id="@+id/view"
@@ -44,6 +44,7 @@
         android:layout_height="312dp"
         android:layout_marginTop="24dp"
         android:src="@color/colorWhite"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

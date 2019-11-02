@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_ranking.*
 import kotlinx.android.synthetic.main.fragment_ranking.view.*
+import com.sopt.partyflatform.R
+import com.sopt.partyflatform.Rank.RankingAdapter
 
 /**
  * A simple [Fragment] subclass.
@@ -18,7 +20,7 @@ class RankingFragment : Fragment() {
 
     private lateinit var rvRanking: RecyclerView
     private lateinit var rankingAdapter: RankingAdapter
-
+    //private var
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,36 +33,13 @@ class RankingFragment : Fragment() {
         //fragment_rv = view.findViewById(R.id.)
 
         initRankRepoList(view)
-
-        view.newText.setOnClickListener {
-            fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.container, LatestFragment())?.commit()
-        }
         return view
     }
 
     private fun initRankRepoList(v : View){
         rvRanking = v.findViewById(R.id.Ranking_rv)
         rankingAdapter = RankingAdapter(context!!)
-        rankingAdapter.data = listOf(
-            GetRankingData(
-                rank = "1",
-                poster = R.drawable.dog,
-                party = "Halloween Party",
-                party_Idx = 0
-            ),
-            GetRankingData(
-                rank = "2",
-                poster = R.drawable.dog,
-                party = "Christmas Party",
-                party_Idx = 0
-            ),
-            GetRankingData(
-                rank = "3",
-                poster = R.drawable.dog,
-                party = "New Year Party",
-                party_Idx = 0
-        )
-        )
+
         rvRanking.adapter = rankingAdapter
         rvRanking.layoutManager = LinearLayoutManager(context)
     }

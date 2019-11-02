@@ -1,4 +1,4 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Rank
 
 import android.app.Activity
 import android.content.Intent
@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.li_rank_item.view.*
+import com.sopt.partyflatform.Detail.DetailFragment
+import com.sopt.partyflatform.R
 
 class RankingViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
@@ -30,7 +31,7 @@ class RankingViewHolder(view : View) : RecyclerView.ViewHolder(view) {
             val activity = itemView.context as? AppCompatActivity
 
             val detailFragment = DetailFragment()
-            detailFragment.idx = party_Idx
+            // detailFragment.idx = party_Idx
             activity?.supportFragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.container, detailFragment)?.commit()
 
         }
