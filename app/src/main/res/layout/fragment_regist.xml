@@ -72,6 +72,7 @@
             android:layout_marginLeft="20dp"
             android:background="@color/cardview_shadow_start_color"
             android:text="게시하기"
-            android:textColor="@color/cardview_light_background"></Button>
+            android:textColor="@color/cardview_light_background">
+        </Button>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
