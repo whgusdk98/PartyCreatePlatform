@@ -1,4 +1,4 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Rank
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.sopt.partyflatform.R
 
 /**
  * A simple [Fragment] subclass.
@@ -50,7 +51,7 @@ class RankingFragment : Fragment() {
                 rank = "3",
                 poster = R.drawable.dog,
                 party = "New Year Party"
-        )
+            )
         )
         rvRanking.adapter = rankingAdapter
         rvRanking.layoutManager = LinearLayoutManager(context)

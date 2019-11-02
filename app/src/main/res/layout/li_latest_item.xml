@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/latest_img"
         android:layout_width="158dp"
         android:layout_height="158dp"
+        android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:src="@color/colorAccent"
@@ -20,7 +23,34 @@
         android:id="@+id/latest_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:layout_marginTop="5dp"
+        android:maxLength="12"
+        android:textSize="13sp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/latest_img" />
+
+    <TextView
+        android:id="@+id/latest_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:maxLength="9"
+        android:text="address"
+        android:textSize="9sp"
+        android:textColor="#505050"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latest_title" />
+
+    <TextView
+        android:id="@+id/latest_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="date"
+        android:maxLength="9"
+        android:textSize="9sp"
+        android:textColor="#505050"
+        app:layout_constraintStart_toEndOf="@+id/latest_address"
+        app:layout_constraintTop_toTopOf="@+id/latest_address" />
 </androidx.constraintlayout.widget.ConstraintLayout>

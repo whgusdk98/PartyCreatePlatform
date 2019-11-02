@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailFragment">
+    tools:context=".Detail.DetailFragment">
 
         <ImageView
             android:id="@+id/detail_img"
             android:layout_width="match_parent"
             android:layout_height="360dp"
-            tools:layout_editor_absoluteX="77dp"
-            tools:layout_editor_absoluteY="116dp"
+            android:scaleType="centerCrop"
             tools:src="@tools:sample/avatars" />
 
         <LinearLayout
@@ -25,45 +24,50 @@
             android:layout_marginTop="29dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/detail_title"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="빨간 딱지"
+
                     android:textSize="23dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <CheckBox
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/checkbox_drawable"></CheckBox>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                    android:id="@+id/checkBox"
+                    android:layout_width="28dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:button="@null"
+                    android:background="@drawable/checkbox_drawable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></CheckBox>
 
                 <TextView
                     android:id="@+id/detail_host"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="한방에한놈"></TextView>
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detail_title"></TextView>
 
                 <TextView
                     android:id="@+id/detail_like"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="216dp"
-                    android:text="293"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="26dp"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"></TextView>
-            </LinearLayout>
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,7 +91,6 @@
                     android:layout_marginLeft="4dp"
                     android:letterSpacing="-0.02"
                     android:lineSpacingExtra="6sp"
-                    android:text="2019년 11월 22일 (금) 19:00 "
                     android:textColor="#444444"
                     android:textSize="14sp" />
             </LinearLayout>
@@ -112,16 +115,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:letterSpacing="-0.02"
+                    android:layout_marginLeft="4dp"
                     android:lineSpacingExtra="6sp"
-                    android:text="한양대학교 운동장"
                     android:textColor="#444444"
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <view
-                android:layout_width="360dp"
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginEnd="25dp"
                 android:layout_height="2dp"
-                android:layout_marginTop="23dp"></view>
+                android:background="#e6e6e6"
+                android:layout_marginTop="23dp"></View>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -141,9 +146,6 @@
                 android:layout_marginRight="60dp"
                 android:letterSpacing="-0.04"
                 android:lineSpacingExtra="6sp"
-                android:text="‘내가 바로 딱지왕’ 각자 집에서 만든 딱지를 가져와
-딱지 대결을 해봐요! 1등에게는 제가 준비한 특별한
-상품도 있답니다~!"
                 android:textColor="#333333"
                 android:textSize="14sp" />
             <TextView
@@ -163,12 +165,10 @@
                 android:textSize="14sp"
                 android:textColor="#333333"
                 android:layout_marginTop="13dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginRight="60dp"
                 android:letterSpacing="-0.04"
                 android:lineSpacingExtra="6sp"
-                tools:text="‘내가 바로 딱지왕’ 각자 집에서 만든 딱지를 가져와
-딱지 대결을 해봐요! 1등에게는 제가 준비한 특별한
-상품도 있답니다~!"
                 />
         </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Detail
 
 data class DetailItem (
     val detail_img : String,

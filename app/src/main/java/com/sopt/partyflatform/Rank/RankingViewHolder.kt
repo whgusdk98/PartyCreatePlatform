@@ -1,10 +1,10 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Rank
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.li_rank_item.view.*
+import com.sopt.partyflatform.R
 
 class RankingViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 

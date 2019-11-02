@@ -1,9 +1,10 @@
-package com.sopt.partyflatform
+package com.sopt.partyflatform.Rank
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.sopt.partyflatform.R
 
 class RankingAdapter (private val context: Context): RecyclerView.Adapter<RankingViewHolder>(){
     var data = listOf<GetRankingData>()
