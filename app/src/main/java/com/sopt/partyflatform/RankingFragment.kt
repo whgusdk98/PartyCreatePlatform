@@ -44,22 +44,34 @@ class RankingFragment : Fragment() {
         rankingAdapter.data = listOf(
             GetRankingData(
                 rank = "1",
-                poster = R.drawable.dog,
                 party = "Halloween Party",
                 party_Idx = 0
             ),
             GetRankingData(
                 rank = "2",
-                poster = R.drawable.dog,
                 party = "Christmas Party",
                 party_Idx = 0
             ),
             GetRankingData(
                 rank = "3",
-                poster = R.drawable.dog,
                 party = "New Year Party",
                 party_Idx = 0
-        )
+        ),
+            GetRankingData(
+                rank = "4",
+                party = "New Year Party",
+                party_Idx = 0
+        ),
+            GetRankingData(
+                rank = "5",
+                party = "Christmas Party",
+                party_Idx = 0
+            ),
+            GetRankingData(
+                rank = "6",
+                party = "Halloween Party",
+                party_Idx = 0
+            )
         )
         rvRanking.adapter = rankingAdapter
         rvRanking.layoutManager = LinearLayoutManager(context)
