@@ -21,10 +21,7 @@ class LatestFragment : Fragment() {
     ): View? {
         val v =  inflater.inflate(R.layout.fragment_latest, container, false)
 
-        v.rv_latest_item.adapter = latestAdapter
-
-        v.rv_latest_item.layoutManager = GridLayoutManager(context, 2)
-
+        latestAdapter = LatestAdapter(context!!)
         latestAdapter.data = listOf(
             LatestItem(
                 latest_img = "1",
@@ -44,9 +41,10 @@ class LatestFragment : Fragment() {
             )
         )
 
-        v.rv_latest_item.setOnClickListener {
+        v.rv_latest_item.adapter = latestAdapter
 
-        }
+        v.rv_latest_item.layoutManager = GridLayoutManager(context, 2)
+
 
         latestAdapter.notifyDataSetChanged()
 

@@ -19,6 +19,7 @@ class DetailFragment : Fragment() {
 //    var detail_date = ""
 //    var detail_txt = ""
 //    var detail_caution = ""
+    var idx = 0
 
 
     override fun onCreateView(
