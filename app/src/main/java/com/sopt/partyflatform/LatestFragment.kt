@@ -44,6 +44,10 @@ class LatestFragment : Fragment() {
             )
         )
 
+        v.rv_latest_item.setOnClickListener {
+
+        }
+
         latestAdapter.notifyDataSetChanged()
 
         return v

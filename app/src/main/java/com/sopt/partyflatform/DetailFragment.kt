@@ -29,7 +29,7 @@ class DetailFragment : Fragment() {
         val detail_view = inflater.inflate(R.layout.fragment_detail, container, false)
 
 
-        val item: DetailItem = DetailItem("0", "0", "0", "0", "0", "0", "0")
+        val item: DetailItem = DetailItem("0","0", "0", "0", "0", "0", "0", "0")
 
         Glide.with(this@DetailFragment)
             .load(item.detail_img)
@@ -38,6 +38,8 @@ class DetailFragment : Fragment() {
         detail_view.detail_title.text = item.detail_title
 
         detail_view.detail_host.text = item.detail_host
+
+        detail_view.detail_like.text = item.detail_like
 
         detail_view.detail_date.text = item.detail_date
 
