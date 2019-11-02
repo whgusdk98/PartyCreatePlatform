@@ -3,18 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Rank.RankingFragment">
+    android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/rankText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        android:layout_marginTop="17dp"
+        android:text="인기"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/newText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="17dp"
+        android:textSize="20sp"
+        android:text="최신"
+        app:layout_constraintStart_toEndOf="@+id/rankText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/rankText"
+        app:layout_constraintStart_toStartOf="@+id/rankText"
+        app:layout_constraintTop_toBottomOf="@+id/rankText" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Ranking_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="26dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/bar"
+        app:layout_constraintVertical_bias="0.56" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

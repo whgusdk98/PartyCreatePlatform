@@ -1,4 +1,4 @@
-package com.sopt.partyflatform.Rank
+package com.sopt.partyflatform
 
 
 import android.os.Bundle
@@ -8,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_ranking.*
+import kotlinx.android.synthetic.main.fragment_ranking.view.*
 import com.sopt.partyflatform.R
+import com.sopt.partyflatform.Rank.RankingAdapter
 
 /**
  * A simple [Fragment] subclass.
@@ -36,23 +39,7 @@ class RankingFragment : Fragment() {
     private fun initRankRepoList(v : View){
         rvRanking = v.findViewById(R.id.Ranking_rv)
         rankingAdapter = RankingAdapter(context!!)
-        rankingAdapter.data = listOf(
-            GetRankingData(
-                rank = "1",
-                poster = R.drawable.dog,
-                party = "Halloween Party"
-            ),
-            GetRankingData(
-                rank = "2",
-                poster = R.drawable.dog,
-                party = "Christmas Party"
-            ),
-            GetRankingData(
-                rank = "3",
-                poster = R.drawable.dog,
-                party = "New Year Party"
-            )
-        )
+
         rvRanking.adapter = rankingAdapter
         rvRanking.layoutManager = LinearLayoutManager(context)
     }
