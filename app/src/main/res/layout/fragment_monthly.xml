@@ -39,60 +39,57 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_image"
         android:layout_width="312dp"
         android:layout_height="312dp"
         android:layout_marginTop="24dp"
-        android:src="@color/colorLightGray"
-        android:background="@drawable/corners"
+        android:src="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:layout_marginTop="16dp"
-        android:text="빨간딱지"
         android:textColor="@color/colorBlack"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_image" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
         android:layout_marginTop="8dp"
-        android:text="2019년 11월 22일 (금) 19:00"
         android:textColor="@color/colorLightGray"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tv_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
-        android:text="한양대학교 운동장"
         android:textColor="@color/colorLightGray"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
     <Button
+        android:id="@+id/btn_detail"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="312dp"
         android:layout_height="48dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
         android:text="자세히 보기"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_address" />
 </androidx.constraintlayout.widget.ConstraintLayout>

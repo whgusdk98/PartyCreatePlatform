@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragment"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/detail_img"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="116dp"
+        tools:src="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="29dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="빨간 딱지"
+                android:textSize="23dp"
+                android:textStyle="bold"
+                />
+            <CheckBox
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/checkbox_drawable"
+                android:button="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_selectimage" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주최: "
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="504dp"></TextView>
+            <TextView
+                android:id="@+id/detail_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한방에 한놈"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/detail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일시: "
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="504dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11월 22일 금요일 저녁7시"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/detail_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내용: "
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="504dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내가 바로 딱지왕 각자 집에서 직접 만든 딱지를 가져와 딱지대결을 해봐요! 1등에게는 제가 준비한 특별한 상품도 있답니다~!"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/detail_caution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="필독사항: "
+                tools:layout_editor_absoluteX="192dp"
+                tools:layout_editor_absoluteY="504dp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="빨간색 재료로 딱지를 직접 만들어오셔야해요"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
