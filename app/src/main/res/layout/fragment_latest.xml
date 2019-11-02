@@ -3,8 +3,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LatestFragment">
+    tools:context=".LatestFragment"
+    android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#969696"
+            android:lineSpacingExtra="9sp"
+            android:text="인기"
+            />
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="9sp"
+            tools:text="최신"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="74dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"></View>
 
 
     <androidx.recyclerview.widget.RecyclerView
