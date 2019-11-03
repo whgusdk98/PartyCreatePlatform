@@ -3,6 +3,7 @@ package com.sopt.partyflatform.Api
 import com.sopt.partyflatform.Detail.GetDetailMainInfoData
 import com.sopt.partyflatform.Latest.GetLatestMainData
 import com.sopt.partyflatform.Monthly.GetMonthlyMainInfoData
+import com.sopt.partyflatform.Rank.GetRankMainData
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -19,7 +20,7 @@ interface GetService {
 
     @GET("/party/order/like")
     fun getRank(
-    ): Call<GetLatestMainData>
+    ): Call<GetRankMainData>
 
     @GET("/party/detail/{party_idx}")
     fun getDetail(@Path("party_idx")party_idx: Int

@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.partyflatform.R
 
-class RankingAdapter (private val context: Context): RecyclerView.Adapter<RankingViewHolder>(){
-    var data = listOf<GetRankingData>()
+class RankingAdapter (private val context: Context, private var data : List<Rankdata>): RecyclerView.Adapter<RankingViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RankingViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.li_rank_item,parent,false)

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.sopt.partyflatform.Api.ApplicationController
 import com.sopt.partyflatform.R
+import com.sopt.partyflatform.RankingFragment
 import kotlinx.android.synthetic.main.fragment_latest.view.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -19,6 +20,7 @@ import retrofit2.Response
  */
 class LatestFragment : Fragment() {
     private lateinit var latestAdapter : LatestAdapter
+    private lateinit var rankingFragment: RankingFragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,6 +28,10 @@ class LatestFragment : Fragment() {
     ): View? {
         val v =  inflater.inflate(R.layout.fragment_latest, container, false)
 
+        rankingFragment = RankingFragment()
+        v.rankingtxt.setOnClickListener {
+            fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.container, rankingFragment)?.commit()
+        }
 
 
         getData(v)
